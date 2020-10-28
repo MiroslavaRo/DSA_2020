@@ -13,14 +13,15 @@ namespace DSA_Class_Work_lesson3
             //Task02();
             //Task03();
             //Task04();
-            Task05();
+            // Task05();
+            Task06();
         }
         private static void Task01()
         {
             /*Find Min and Max elements in the array
 
             1. Start
-            2. define array, it length, randomazer, max, min
+            2. define array, its length, randomazer, max, min
             3. fill in array
             4. 1) check if current element of array is bigger then max;
                2.1) if yes => max = current element
@@ -61,7 +62,7 @@ namespace DSA_Class_Work_lesson3
             /* Calculate average value of the array items
 
             1. Start
-            2. define array, it length, randomazer, sum, average
+            2. define array, its length, randomazer, sum, average
             3. fill in array
             4.1. sum=sum+ current element of array 
             4.2. go to next element of array until last elem
@@ -90,7 +91,7 @@ namespace DSA_Class_Work_lesson3
             /*Swap 2 arrays items
 
             1. Start
-            2. define array, it length,temp
+            2. define array, its length,temp
             3. fill in array Ex:(1,2,3)
             4.1. temp = current element 
             4.2. current element = last element Ex:(3,2,3)
@@ -204,9 +205,26 @@ namespace DSA_Class_Work_lesson3
             }
             foreach (var e in stack)
             {
-                stack.Pop();
+              stack.Pop();
             }
 
+        }
+        private static void Task06()
+        {
+            /* Add element into Binary tree
+            1. start
+            2. define binary tree, element
+            3. read element from user
+            4. add element in binary tree
+            5. read next element from user
+            6. 1) if current element > previous element 
+                add current element to the rigth branch of tree
+               2) else
+                 add current element to the left branch of tree
+            7. go to step 5 until the last element read
+            8. end            
+             
+             */
         }
     }
 }
