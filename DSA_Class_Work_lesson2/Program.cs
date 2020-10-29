@@ -12,13 +12,12 @@ namespace DSA_Class_Work_lesson2
 
         static void Main(string[] args)
         {
-            //StudentMarks();
+            // StudentMarks();
             // StudentMarks2();
-            //SortedDict();
-           // MenuList();
-            //task02();
-            task03();
-            //task04();
+            // SortedDict();
+            // MenuList();
+            // task02();
+             task03();
            
 
 
@@ -90,8 +89,26 @@ namespace DSA_Class_Work_lesson2
             }
              static void SortedDict()
              {
+                string text = " text some a text just some text";
+                IDictionary<string, int> wordsCount = new SortedDictionary<string, int>();
 
-             }
+                string[] words = text.Split(' ');
+                foreach (string word in words)
+                {
+                    int count = 1;
+                    if (wordsCount.ContainsKey(word))
+                    {
+                        count = wordsCount[word] + 1;
+                    }
+                    wordsCount[word] = count;
+                }
+
+                foreach (var w in wordsCount)
+                {
+                    Console.WriteLine($"Word {w.Key}, count={w.Value} ");
+                }
+            }
+
              static void MenuList()
             {
                 while (true)
@@ -122,25 +139,29 @@ namespace DSA_Class_Work_lesson2
                 }
 
             }
+
             static void AddItem()
             {
-                Console.WriteLine("Item = ");
+                Console.Write("Item = ");
                 int item = int.Parse(Console.ReadLine());
                 ListItem.Add(item);
             }
+
             static void RemoveItem()
             {
                 Console.WriteLine("Item to remove = ");
                 int item = int.Parse(Console.ReadLine());
                 ListItem.Remove(item);
             }
+
             static void DisplayItem()
             {
+                Console.WriteLine();
                 foreach(var item in ListItem)
                 {
                     Console.WriteLine($"Item = {item}");
                 }
-                Console.WriteLine("Press Enter to countinue...");
+                Console.WriteLine("\nPress Enter to countinue...");
                 Console.ReadLine();
             }
 
@@ -148,7 +169,11 @@ namespace DSA_Class_Work_lesson2
             {
                 int [] array = { 3, 4, 4, 2, 3, 3, 4, 3, 2};
                 IDictionary<int, int> numberCount = new SortedDictionary<int, int>();
-                
+                foreach (var n in array)
+                {
+                    Console.Write($"{n} ");
+                }
+                Console.WriteLine();
                 foreach (int num in array)
                 {
                     int count = 1;
@@ -164,10 +189,16 @@ namespace DSA_Class_Work_lesson2
                 }
 
             }
+
              static void task03()
             {
-                int[] array = { 4, 2, 2, 5, 2, 3, 2, 3, 1, 5, 2, 6, 6, 6 };
+                int[] array = { 4, 2, 2, 5, 2, 3, 2, 3, 1, 5, 2, 6, 6, 6, 2 };
                 IDictionary<int, int> numberCount = new SortedDictionary<int, int>();
+                foreach (var n in array)
+                {
+                    Console.Write($"{n} ");
+                }
+                Console.WriteLine();
 
                 foreach (int num in array)
                 {
@@ -192,17 +223,7 @@ namespace DSA_Class_Work_lesson2
                 {
                     Console.Write(w+" ");
                 }
-
-
             }
-            /* static void task03()
-            {
-
-            }*/
-            /* static void task04()
-            {
-
-            }*/
 
 
         }

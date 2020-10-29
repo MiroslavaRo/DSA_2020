@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace DSA_Homework_2
 {
@@ -6,12 +8,12 @@ namespace DSA_Homework_2
     {
         static void Main(string[] args)
         {
-            task01();
-           //task02();
+            //task01();
+            Phonebook();
 
 
         }
-         static void task01()
+        static void task01()
          {
             string cont = "";
             do
@@ -162,14 +164,86 @@ namespace DSA_Homework_2
 
          }
       
-        /* static void task02()
+         static void Phonebook()
          {
+            Console.WriteLine("----------Phonebook----------\n");
+            Dictionary<string, string> Phonebook = new Dictionary<string, string>();
+            Phonebook.Add("Jane", "380982298904982");
+            Phonebook.Add("Jojo", "380949945989049");
+            Phonebook.Add("Luis", "477575849490405");
 
-         }*/
-        /* static void task03()
+            while (true)
+            {
+                Console.WriteLine("1. Add delete dictionary entry");
+                Console.WriteLine("2. Delete dictionary entry");
+                Console.WriteLine("3. Search dictionary entry");
+                Console.WriteLine("4. List dictionary entry");
+                Console.WriteLine("5. Exit");
+
+                string choice = Console.ReadLine();
+
+                switch (choice)
+                {
+                    case "1":
+                        Insert(Phonebook);
+                        break;
+                    case "2":
+                        Delete(Phonebook);
+                        break;
+                    case "3":
+                        Search(Phonebook);
+                        break;
+                    case "4":
+                        Display(Phonebook);
+                        break;
+                    case "5":
+                        return;
+                    default:
+                        Console.WriteLine( "Please, try again. Enter a number of dispalied operation.");
+                        break;
+                }
+
+            }
+
+        }
+         static void Insert(Dictionary <string, string> Phonebook)
         {
+            Console.Write("Name = ");
+            string name = Console.ReadLine();
+            Console.Write("Phone = ");
+            string phone = Console.ReadLine();
+            Phonebook.Add(name, phone);            
 
-        }*/
+        }
+        static void Delete(Dictionary<string, string> Phonebook)
+        {
+            Console.Write("Name = ");
+            string name = Console.ReadLine();
+            Phonebook.Remove(name);
+
+        }
+        static void Search(Dictionary<string, string> Phonebook)
+        {
+            Console.Write("Name = ");
+            string name = Console.ReadLine();
+            if( Phonebook.ContainsKey(name))
+            {
+                Console.WriteLine($"Person '{name}' \t phone: {Phonebook[name]}.");
+            }
+            else
+            {
+                Console.WriteLine("This person dosen't exit in Phonebook");
+            }
+
+        }
+        static void Display(Dictionary<string, string> Phonebook)
+        {
+            foreach (var e in Phonebook)
+            {
+                Console.WriteLine($"{ e.Key} \t phone: { e.Value} ");
+            }
+
+        }
         /* static void task04()
         {
 
