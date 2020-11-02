@@ -254,8 +254,8 @@ namespace DSA_Class_Work_lesson3
                               3.2) if current element > next element:
                                        3.3) temp = next element
                                             next element = current element
-                                            current elemnt = next element
-                                                   
+                                            current elemnt = temp
+                                    else: current=current               
                    3.1.2) go to next element until the last element
                    3.1.3) go to step 3.1.1                                                
             3.0.2) go to next element until the last element
