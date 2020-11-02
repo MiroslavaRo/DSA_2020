@@ -26,18 +26,7 @@ namespace DSA_Class_Work_lesson4
         {
             return GetEntries().Count;
         }
-
-        public TEntry Dequeue()
-        {
-            if (Entries.Any())
-            {
-                var itemTobeRemoved = Entries.First.Value;
-                Entries.RemoveFirst();
-                return itemTobeRemoved;
-            }
-
-            return default(TEntry);
-        }
+              
 
         public void Enqueue(TEntry entry)
         {
@@ -63,6 +52,17 @@ namespace DSA_Class_Work_lesson4
                     Entries.AddBefore(ptr, value);
                 }
             }
+        }
+        public TEntry Dequeue()
+        {
+            if (Entries.Any())
+            {
+                var itemTobeRemoved = Entries.First.Value;
+                Entries.RemoveFirst();
+                return itemTobeRemoved;
+            }
+
+            return default(TEntry);
         }
     }
 }
