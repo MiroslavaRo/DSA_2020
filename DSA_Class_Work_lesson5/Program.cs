@@ -31,9 +31,11 @@ namespace DSA_Class_Work_lesson5
                 Console.Write($"Student: {s.Name}   № {s.StudentNumber}\n");
             }
             Console.WriteLine("\n-----------------------\n");
+            Console.Write("Enter student number:");
+            int num = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Binary Search:");
-            Console.WriteLine($"Student {BinarySearch(SortedByBubble(unsorted))} is {SortedByBubble(unsorted)[BinarySearch(SortedByBubble(unsorted))].Name}");
+            Console.WriteLine($"Student № {BinarySearch(SortedByBubble(unsorted),num)+1} is {SortedByBubble(unsorted)[BinarySearch(SortedByBubble(unsorted),num)].Name}");
 
         }
        
@@ -79,12 +81,11 @@ namespace DSA_Class_Work_lesson5
             }
             return -1;                //key not found
         }*/
-        public static int BinarySearch(Students[] SortedByBubble)
+        public static int BinarySearch(Students[] SortedByBubble, int key)
         {
             Students[] sortedByBinarySearch = SortedByBubble;
             int low = sortedByBinarySearch[0].StudentNumber;
             int high = sortedByBinarySearch[sortedByBinarySearch.Length - 1].StudentNumber;
-            int key = sortedByBinarySearch[sortedByBinarySearch.Length / 2].StudentNumber;
             while (low<=high)
             {
                 int mid = (low + high) / 2;
