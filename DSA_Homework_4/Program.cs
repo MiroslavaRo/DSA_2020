@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DSA_Class_Work_lesson4;
+using System;
 
 namespace DSA_Homework_4
 {
@@ -6,7 +7,7 @@ namespace DSA_Homework_4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            BigStoreTester.RunTest();
         }
     }
 }

@@ -3,12 +3,11 @@ using System;
 using System.Collections.Generic;
 
 
-
 namespace DSA_Class_Work_lesson4
 {
     class BigStoreTester
     {
-        public static OrderedMultiDictionary<double, Article> D = new OrderedMultiDictionary<double, Article>(true);
+        public static Dictionary<double, Article> D = new Dictionary<double, Article>();
 
         public static void RunTest()
         {
@@ -33,23 +32,13 @@ namespace DSA_Class_Work_lesson4
             double max = double.Parse(str[1]);
             Console.WriteLine($"Articles in the diapason {min} - {max}");
 
-            var articlesInGivenRange = D.Range(min, true, max, true);
-            foreach (var article in articlesInGivenRange)
-            {
-                foreach (var item in article.Value)
-                {
-                    Console.WriteLine(article.Value.ToString());
-                }
-                Console.WriteLine();
-            }
-
-           /* foreach (var article in D)
+            foreach (var article in D)
             {
                 if (article.Key <= max && article.Key >= min)
                 {
                     Console.WriteLine(article.Value.ToString());
                 }
-            }*/
+            }
 
 
             Console.ReadLine();
