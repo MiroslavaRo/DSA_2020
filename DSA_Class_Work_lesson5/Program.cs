@@ -30,7 +30,10 @@ namespace DSA_Class_Work_lesson5
             {
                 Console.Write($"Student: {s.Name}   № {s.StudentNumber}\n");
             }
-           
+            Console.WriteLine("\n-----------------------\n");
+
+            Console.WriteLine("Binary Search:");
+            Console.WriteLine($"Student {BinarySearch(SortedByBubble(unsorted))} is {SortedByBubble(unsorted)[BinarySearch(SortedByBubble(unsorted))].Name}");
 
         }
        
@@ -55,6 +58,52 @@ namespace DSA_Class_Work_lesson5
             return sortedByBubble;
 
 
+        }
+       /* int binarySearch(int low, int high, int key)
+        {
+            while (low <= high)
+            {
+                int mid = (low + high) / 2;
+                if (a[mid] < key)
+                {
+                    low = mid + 1;
+                }
+                else if (a[mid] > key)
+                {
+                    high = mid - 1;
+                }
+                else
+                {
+                    return mid;
+                }
+            }
+            return -1;                //key not found
+        }*/
+        public static int BinarySearch(Students[] SortedByBubble)
+        {
+            Students[] sortedByBinarySearch = SortedByBubble;
+            int low = sortedByBinarySearch[0].StudentNumber;
+            int high = sortedByBinarySearch[sortedByBinarySearch.Length - 1].StudentNumber;
+            int key = sortedByBinarySearch[sortedByBinarySearch.Length / 2].StudentNumber;
+            while (low<=high)
+            {
+                int mid = (low + high) / 2;
+                if (sortedByBinarySearch[mid].StudentNumber < key)
+                {
+                    low = mid + 1;
+                }
+                else if (sortedByBinarySearch[mid].StudentNumber > key)
+                {
+                    high = mid - 1;
+                }
+                else
+                {
+                    return mid;
+                }
+            }
+            
+
+            return -1;
         }
     }
 }
