@@ -17,11 +17,11 @@ namespace DSA_Class_Work_lesson2
             // SortedDict();
             // MenuList();
             // task02();
-             task03();
+             //task03();
            
 
 
-            static void StudentMarks()
+       /*     static void StudentMarks()
             {
                 Dictionary<string, int> studentMarks = new Dictionary<string, int>();
                 studentMarks.Add("Jane", 90);
@@ -223,7 +223,7 @@ namespace DSA_Class_Work_lesson2
                 {
                     Console.Write(w+" ");
                 }
-            }
+            }*/
 
 
         }

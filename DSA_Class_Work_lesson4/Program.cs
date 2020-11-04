@@ -26,9 +26,9 @@ namespace DSA_Class_Work_lesson4
                             PhonebookTester.RunTest();
                             break;
 
-                        /*case 3:
+                        case 3:
                             BigStoreTester.RunTest();
-                            break;*/
+                            break;
 
                         case 4:
                             PriorityQueueTester.RunTest();
