@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-
+/*
 
 namespace DSA_Class_Work_lesson4
 {
@@ -49,10 +49,10 @@ namespace DSA_Class_Work_lesson4
                 {
                     Console.WriteLine(article.Value.ToString());
                 }
-            }*/
+            }
 
 
             Console.ReadLine();
         }
     }
-}
+}*/
