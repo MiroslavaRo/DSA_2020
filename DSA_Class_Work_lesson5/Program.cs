@@ -24,7 +24,7 @@ namespace DSA_Class_Work_lesson5
             }
             Console.WriteLine("\n-----------------------\n");
 
-            Console.WriteLine("Sorted by Selection sort:");
+            Console.WriteLine("Sorted by Bubble sort:");
 
             foreach (var s in SortedByBubble(unsorted))
             {
@@ -39,18 +39,39 @@ namespace DSA_Class_Work_lesson5
                 Console.Write($"Student: {s.Name}   № {s.StudentNumber}\n");
             }
             Console.WriteLine("\n-----------------------\n");
+
+            Console.WriteLine("Sorted by Insertion sort:");
             foreach (var s in SortedByInsertion(unsorted))
             {
                 Console.Write($"Student: {s.Name}   № {s.StudentNumber}\n");
             }
             Console.WriteLine("\n-----------------------\n");
-            Console.Write("Enter student number:");
+            Console.WriteLine("Enter any button to continue...");
+            Console.ReadLine();
+            Console.Clear();
+            
+            foreach (var s in SortedBySelection(unsorted))
+            {
+                Console.Write($"Student: {s.Name}   № {s.StudentNumber}\n");
+            }
+
+            Console.WriteLine("\n-----------------------");
+            Console.Write("Enter student number: ");
             int num = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Binary Search:");
-            Console.WriteLine($"Student № {BinarySearch(SortedByBubble(unsorted), num) + 1} is {SortedByBubble(unsorted)[BinarySearch(SortedByBubble(unsorted), num)].Name}");
+            Console.WriteLine("\n-----------------------\n");
             Console.WriteLine("Lineary Search:");
             Console.WriteLine($"Student № {unsorted[LinearSearch(unsorted, num)].StudentNumber} is {unsorted[LinearSearch(unsorted, num)].Name}");
+            Console.WriteLine("Binary Search:");
+            if (num == 1)
+            {
+                Console.WriteLine($"Student № {BinarySearch(SortedByBubble(unsorted), num) + 2} is {SortedByBubble(unsorted)[BinarySearch(SortedByBubble(unsorted), num)+1].Name}");
+            }
+            else
+            {
+                Console.WriteLine($"Student № {BinarySearch(SortedByBubble(unsorted), num) + 1} is {SortedByBubble(unsorted)[BinarySearch(SortedByBubble(unsorted), num)].Name}");
+            }
+
         }
 
         public static Students[] SortedByBubble(Students[] unsorted)

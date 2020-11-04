@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System;
-using System.Collections.Generic;
+﻿using System;
+using Wintellect.PowerCollections;
 
-/*
 
 namespace DSA_Class_Work_lesson4
 {
@@ -14,7 +12,7 @@ namespace DSA_Class_Work_lesson4
         {
             Console.Clear();
 
-            var MyArticles = new Article[5]
+            var MyArticles = new Article[]
             {
             new Article("barcode1", "vendor1", "title1", 2000.0),
             new Article("barcode2", "vendor2", "title2", 2500.0),
@@ -27,10 +25,11 @@ namespace DSA_Class_Work_lesson4
                 D.Add(article.price, article);
             }
 
-            Console.Write("Enter price range (min - max): ");
-            string[] str = Console.ReadLine().Split(" - ");
-            double min = double.Parse(str[0]);
-            double max = double.Parse(str[1]);
+            Console.WriteLine("Enter price range: ");
+            Console.Write("min: ");
+            Console.Write("max: ");
+            double min = double.Parse(Console.ReadLine());
+            double max = double.Parse(Console.ReadLine());
             Console.WriteLine($"Articles in the diapason {min} - {max}");
 
             var articlesInGivenRange = D.Range(min, true, max, true);
@@ -43,16 +42,8 @@ namespace DSA_Class_Work_lesson4
                 Console.WriteLine();
             }
 
-           /* foreach (var article in D)
-            {
-                if (article.Key <= max && article.Key >= min)
-                {
-                    Console.WriteLine(article.Value.ToString());
-                }
-            }
-
 
             Console.ReadLine();
         }
     }
-}*/
+}

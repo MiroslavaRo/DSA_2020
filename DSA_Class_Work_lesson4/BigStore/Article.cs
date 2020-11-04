@@ -60,32 +60,14 @@ namespace DSA_Class_Work_lesson4
             get => price;
             set
             {
-                bool checkprice = true;
-                while (checkprice)
+                if (value < 0)
                 {
-                    try
-                    {
-
-                        if (value < 0)
-                        {
-                            throw new ArgumentNullException("Price can`t be negative!" + "\nPlease, enter again.");
-                        }
-                    }
-
-                    catch (OverflowException of)
-                    {
-                        throw new Exception("Price should be numeric!" + of + "\nPlease, enter again.");
-                    }
-                    catch (FormatException fe)
-                    {
-                        throw new Exception("Price should be numeric!" + fe + "\nPlease, enter again.");
-
-                    }
+                    throw new ArgumentNullException("Price can`t be negative!" + "\nPlease, enter again.");
+                }                  
                     price = value;
-                    checkprice = false;
                 }
 
-            }
+            
         }
         public override string ToString()
         {

@@ -3,10 +3,17 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Win32Resource></Win32Resource>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="System.Collections" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PowerCollections">
+      <HintPath>bin\Debug\netcoreapp3.1\PowerCollections.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
