@@ -1,49 +1,59 @@
 ﻿using System;
 using Wintellect.PowerCollections;
 
-
 namespace DSA_Class_Work_lesson4
 {
     class BigStoreTester
     {
-        public static OrderedMultiDictionary<double, Article> D = new OrderedMultiDictionary<double, Article>(true);
+
 
         public static void RunTest()
         {
             Console.Clear();
+            OrderedMultiDictionary<double, string> articles = new OrderedMultiDictionary<double, string>(true);
 
-            var MyArticles = new Article[]
+            int max = 4000;
+            int min = 1000;
+            var r = new Random();
+            for (int i = 1; i <= 10; i++)
             {
-            new Article("barcode1", "vendor1", "title1", 2000.0),
-            new Article("barcode2", "vendor2", "title2", 2500.0),
-            new Article("barcode3", "vendor3", "title3", 3000.0),
-            new Article("barcode4", "vendor4", "title4", 2600.0),
-            new Article("barcode5", "vendor5", "title5", 1999.0)
-            };
-            foreach (var article in MyArticles)
-            {
-                D.Add(article.price, article);
+                var article = new Article("Barcode: b" + i, "Vendor: v" + i, "Title: t" + i, r.Next(min, max));
+                articles.Add(article.Price, article.Title);
+                articles.Add(article.Price, article.Vendor);
+                articles.Add(article.Price, article.Barcode);
             }
-
-            Console.WriteLine("Enter price range: ");
-            Console.Write("min: ");
-            Console.Write("max: ");
-            double min = double.Parse(Console.ReadLine());
-            double max = double.Parse(Console.ReadLine());
-            Console.WriteLine($"Articles in the diapason {min} - {max}");
-
-            var articlesInGivenRange = D.Range(min, true, max, true);
-            foreach (var article in articlesInGivenRange)
+            var GivenRange = articles.Range(min, true, max, true);
+            foreach (var article in GivenRange)
             {
+                Console.WriteLine($"Price: {article.Key}");
                 foreach (var item in article.Value)
                 {
-                    Console.WriteLine(article.Value.ToString());
+                    Console.WriteLine($"{item}");
                 }
                 Console.WriteLine();
             }
+            Console.WriteLine("------------------------------");
+            Console.WriteLine("Enter price range: ");
+            Console.Write("min: ");
+            int from = int.Parse(Console.ReadLine());
+            Console.Write("max: ");
+            int to = int.Parse(Console.ReadLine());
 
+            Console.Clear();
 
-            Console.ReadLine();
+            Console.WriteLine($"Articles in the diapason {from} - {to}: \n");
+            var articlesInGivenRange = articles.Range(from, true, to, true);
+            foreach (var article in articlesInGivenRange)
+            {
+                Console.WriteLine($"Price: {article.Key}");
+                foreach (var item in article.Value)
+                {
+                    Console.WriteLine($"{item}");
+                }
+                Console.WriteLine();
+            }
+              
+                Console.ReadLine();
+            }
         }
     }
-}

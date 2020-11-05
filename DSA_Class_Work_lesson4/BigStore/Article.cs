@@ -5,19 +5,16 @@ namespace DSA_Class_Work_lesson4
 {
     class Article
     {
-        private string barcode;
-        private string vendor;
-        private string title;
-        public double price;
         public Article(string barcode, string vendor, string title, double price)
         {
 
             Barcode = barcode;
             Vendor = vendor;
             Title = title;
+            Price = price;
         }
-        public string Vendor
-        {
+        public string Vendor { get; set; }
+      /*  {
             get => vendor;
             set
             {
@@ -27,10 +24,10 @@ namespace DSA_Class_Work_lesson4
                 }
                 vendor = value;
             }
-        }
+        }*/
 
-        public string Barcode
-        {
+        public string Barcode { get; set; }
+        /*{
             get => barcode;
             set
             {
@@ -41,22 +38,22 @@ namespace DSA_Class_Work_lesson4
                 barcode = value;
             }
         }
-
-        public string Title
-        {
-            get => title;
-            set
-            {
-                if (string.IsNullOrEmpty(value))
-                {
-                    throw new ArgumentNullException("Battery can`t be empty!");
-                }
-                title = value;
-            }
-        }
-
-        public double Price
-        {
+        */
+        public string Title { get; set; }
+        /*  {
+              get => title;
+              set
+              {
+                  if (string.IsNullOrEmpty(value))
+                  {
+                      throw new ArgumentNullException("Battery can`t be empty!");
+                  }
+                  title = value;
+              }
+          }
+        */
+          public double Price { get; set; }
+        /*{
             get => price;
             set
             {
@@ -67,12 +64,11 @@ namespace DSA_Class_Work_lesson4
                     price = value;
                 }
 
-            
-        }
-        public override string ToString()
+        }*/
+       /* public override string ToString()
         {
             return $"Barcode: {barcode}, Vendor: {vendor}, Title: {title}, Price: {price}";
-        }
+        }*/
 
 
     }
