@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace DSA_Class_Work_lesson4
+namespace DSA_Class_Work_lesson_6
 {
     class Article
     {

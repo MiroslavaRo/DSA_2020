@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace DSA_Class_Work_lesson3
+namespace DSA_Class_Work_lesson_5
 {
     class Program
     {

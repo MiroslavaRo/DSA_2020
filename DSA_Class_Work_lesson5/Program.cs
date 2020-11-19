@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DSA_Class_Work_lesson5
+namespace DSA_Class_Work_lesson_7
 {
     class Program
     {

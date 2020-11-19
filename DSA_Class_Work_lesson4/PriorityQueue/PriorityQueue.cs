@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace DSA_Class_Work_lesson4
+namespace DSA_Class_Work_lesson_6
 {
 
     public sealed class PriorityQueue<TEntry>
