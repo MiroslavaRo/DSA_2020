@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DSA_Class_Work_lesson_6", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DSA_Class_Work_lesson_7", "DSA_Class_Work_lesson5\DSA_Class_Work_lesson_7.csproj", "{D36858FF-1A12-4D4C-A36C-56BB9E285825}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA_Class_Work_lesson_8", "DSA_Class_Work_lesson_8\DSA_Class_Work_lesson_8.csproj", "{C7645825-1D5E-4AB6-88BC-C6125F550D24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DSA_Class_Work_lesson_11", "DSA_Class_Work_lesson_8\DSA_Class_Work_lesson_11.csproj", "{C7645825-1D5E-4AB6-88BC-C6125F550D24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
